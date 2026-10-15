@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+	<meta name="color-scheme" content="dark light">
+		<script>
+		(function () {
+			var saved = null;
+
+			try {
+				saved = localStorage.getItem("theme");
+			} catch (e) {}
+
+			document.documentElement.dataset.theme =
+				saved === "light"
+					? "light"
+					: "dark";
+		})();
+		</script>
+    <title>ثبِّت</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+href="https://fonts.om/css2?family=Amiri:wght@400;700&display=swap">
+</head>
+<body>
+
+    <div class="container">
+
+		<button
+			id="themeToggle"
+			class="theme-toggle"
+			type="button"
+			aria-label="تبديل الوضع الليلي"
+			title="تبديل الوضع الليلي">
+			☀️
+		</button>
+        <h1>ثبِّت</h1>
+    
+        <div class="settings">
+    
+            <label for="surahSelect">
+                السور المختارة
+            </label>
+
+            <select id="surahSelect" multiple size="6">
+				<option value="1">الفاتحة</option>
+				<option value="2">البقرة</option>
+				<option value="3">آل عمران</option>
+				<option value="4">النساء</option>
+				<option value="5">المائدة</option>
+				<option value="6">الأنعام</option>
+				<option value="7">الأعراف</option>
+				<option value="8">الأنفال</option>
+				<option value="9">التوبة</option>
+				<option value="10">يونس</option>
+				<option value="11">هود</option>
+				<option value="12">يوسف</option>
+				<option value="13">الرعد</option>
+				<option value="14">إبراهيم</option>
+				<option value="15">الحجر</option>
+				<option value="16">النحل</option>
+				<option value="17">الإسراء</option>
+				<option value="18">الكهف</option>
+				<option value="19">مريم</option>
+				<option value="20">طه</option>
+				<option value="21">الأنبياء</option>
+				<option value="22">الحج</option>
+				<option value="23">المؤمنون</option>
+				<option value="24">النور</option>
+				<option value="25">الفرقان</option>
+				<option value="26">الشعراء</option>
+				<option value="27">النمل</option>
+				<option value="28">القصص</option>
+				<option value="29">العنكبوت</option>
+				<option value="30">الروم</option>
+				<option value="31">لقمان</option>
+				<option value="32">السجدة</option>
+				<option value="33">الأحزاب</option>
+				<option value="34">سبأ</option>
+				<option value="35">فاطر</option>
+				<option value="36">يس</option>
+				<option value="37">الصافات</option>
+				<option value="38">ص</option>
+				<option value="39">الزمر</option>
+				<option value="40">غافر</option>
+				<option value="41">فصلت</option>
+				<option value="42">الشورى</option>
+				<option value="43">الزخرف</option>
+				<option value="44">الدخان</option>
+				<option value="45">الجاثية</option>
+				<option value="46">الأحقاف</option>
+				<option value="47">محمد</option>
+				<option value="48">الفتح</option>
+				<option value="49">الحجرات</option>
+				<option value="50">ق</option>
+				<option value="51">الذاريات</option>
+				<option value="52">الطور</option>
+				<option value="53">النجم</option>
+				<option value="54">القمر</option>
+				<option value="55">الرحمن</option>
+				<option value="56">الواقعة</option>
+				<option value="57">الحديد</option>
+				<option value="58">المجادلة</option>
+				<option value="59">الحشر</option>
+				<option value="60">الممتحنة</option>
+				<option value="61">الصف</option>
+				<option value="62">الجمعة</option>
+				<option value="63">المنافقون</option>
+				<option value="64">التغابن</option>
+				<option value="65">الطلاق</option>
+				<option value="66">التحريم</option>
+				<option value="67">الملك</option>
+				<option value="68">القلم</option>
+				<option value="69">الحاقة</option>
+				<option value="70">المعارج</option>
+				<option value="71">نوح</option>
+				<option value="72">الجن</option>
+				<option value="73">المزمل</option>
+				<option value="74">المدثر</option>
+				<option value="75">القيامة</option>
+				<option value="76">الإنسان</option>
+				<option value="77">المرسلات</option>
+				<option value="78">النبأ</option>
+				<option value="79">النازعات</option>
+				<option value="80">عبس</option>
+				<option value="81">التكوير</option>
+				<option value="82">الانفطار</option>
+				<option value="83">المطففين</option>
+				<option value="84">الانشقاق</option>
+				<option value="85">البروج</option>
+				<option value="86">الطارق</option>
+				<option value="87">الأعلى</option>
+				<option value="88">الغاشية</option>
+				<option value="89">الفجر</option>
+				<option value="90">البلد</option>
+				<option value="91">الشمس</option>
+				<option value="92">الليل</option>
+				<option value="93">الضحى</option>
+				<option value="94">الشرح</option>
+				<option value="95">التين</option>
+				<option value="96">العلق</option>
+				<option value="97">القدر</option>
+				<option value="98">البينة</option>
+				<option value="99">الزلزلة</option>
+				<option value="100">العاديات</option>
+				<option value="101">القارعة</option>
+				<option value="102">التكاثر</option>
+				<option value="103">العصر</option>
+				<option value="104">الهمزة</option>
+				<option value="105">الفيل</option>
+				<option value="106">قريش</option>
+				<option value="107">الماعون</option>
+				<option value="108">الكوثر</option>
+				<option value="109">الكافرون</option>
+				<option value="110">النصر</option>
+				<option value="111">المسد</option>
+				<option value="112">الإخلاص</option>
+				<option value="113">الفلق</option>
+				<option value="114">الناس</option>
+
+            </select>
+
+            <label for="hizbSelect">
+                الأحزاب المختارة
+            </label>
+
+            <select id="hizbSelect" multiple size="6">
+                <option value="1">الحزب 1</option>
+                <option value="2">الحزب 2</option>
+                <option value="3">الحزب 3</option>
+                <option value="4">الحزب 4</option>
+                <option value="5">الحزب 5</option>
+                <option value="6">الحزب 6</option>
+                <option value="7">الحزب 7</option>
+                <option value="8">الحزب 8</option>
+                <option value="9">الحزب 9</option>
+                <option value="10">الحزب 10</option>
+                <option value="11">الحزب 11</option>
+                <option value="12">الحزب 12</option>
+                <option value="13">الحزب 13</option>
+                <option value="14">الحزب 14</option>
+                <option value="15">الحزب 15</option>
+                <option value="16">الحزب 16</option>
+                <option value="17">الحزب 17</option>
+                <option value="18">الحزب 18</option>
+                <option value="19">الحزب 19</option>
+                <option value="20">الحزب 20</option>
+                <option value="21">الحزب 21</option>
+                <option value="22">الحزب 22</option>
+                <option value="23">الحزب 23</option>
+                <option value="24">الحزب 24</option>
+                <option value="25">الحزب 25</option>
+                <option value="26">الحزب 26</option>
+                <option value="27">الحزب 27</option>
+                <option value="28">الحزب 28</option>
+                <option value="29">الحزب 29</option>
+                <option value="30">الحزب 30</option>
+                <option value="31">الحزب 31</option>
+                <option value="32">الحزب 32</option>
+                <option value="33">الحزب 33</option>
+                <option value="34">الحزب 34</option>
+                <option value="35">الحزب 35</option>
+                <option value="36">الحزب 36</option>
+                <option value="37">الحزب 37</option>
+                <option value="38">الحزب 38</option>
+                <option value="39">الحزب 39</option>
+                <option value="40">الحزب 40</option>
+                <option value="41">الحزب 41</option>
+                <option value="42">الحزب 42</option>
+                <option value="43">الحزب 43</option>
+                <option value="44">الحزب 44</option>
+                <option value="45">الحزب 45</option>
+                <option value="46">الحزب 46</option>
+                <option value="47">الحزب 47</option>
+                <option value="48">الحزب 48</option>
+                <option value="49">الحزب 49</option>
+                <option value="50">الحزب 50</option>
+                <option value="51">الحزب 51</option>
+                <option value="52">الحزب 52</option>
+                <option value="53">الحزب 53</option>
+                <option value="54">الحزب 54</option>
+                <option value="55">الحزب 55</option>
+                <option value="56">الحزب 56</option>
+                <option value="57">الحزب 57</option>
+                <option value="58">الحزب 58</option>
+                <option value="59">الحزب 59</option>
+                <option value="60">الحزب 60</option>
+            </select>
+    
+            <label for="wordCount">
+                عدد الكلمات الظاهرة
+            </label>
+    
+            <select id="wordCount">
+                <option value="3">3 كلمات</option>
+                <option value="5" selected>5 كلمات</option>
+                <option value="7">7 كلمات</option>
+            </select>
+    
+        </div>
+    
+        <button id="generateBtn">
+            اختر آية
+        </button>
+    
+        <div class="review-area">
+    
+            <p id="preview"></p>
+    
+            <div class="actions">
+    
+                <button id="showAyahBtn">
+                    أظهر الآية
+                </button>
+    
+                <button id="showToNextQuarterBtn">
+                    أظهر إلى الربع الموالي
+                </button>
+    
+            </div>
+    
+        </div>
+    
+        <div class="result-area">
+    
+            <p id="answer"></p>
+    
+            <p id="reference"></p>
+    
+        </div>
+    
+        <button id="nextBtn">
+            آية أخرى
+        </button>
+    
+    </div>
+    
+    <script src="app.js"></script>
+
+</body>
+</html>
